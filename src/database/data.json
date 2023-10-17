@@ -1,0 +1,35 @@
+{
+  "profile": {
+    "gambar": "src/img/profile.jpg",
+    "author": "Rifki",
+    "Team": "xou"
+  },
+  "musik": "src/musik/music.mpeg",
+  "btnList": [
+    {
+      "sosmed": "whatsapp",
+      "link": "https://wa.me/6282153439760"
+    },
+    {
+      "sosmed": "my website",
+      "link": "https://rifkitkj2.wordpress.com/"
+    }
+  ],
+  "btnIcon": [
+    {
+      "sosmed": "instagram",
+      "link": "https://instagram.com/ripkie_?igshid=MzRlODBiNWFlZA==",
+      "icon": "bxl-instagram"
+    },
+    {
+      "sosmed": "tiktok",
+      "link": "https://www.tiktok.com/@bvgjkdjdj?_t=8fWN4IRjiBW&_r=1",
+      "icon": "bxl-tiktok"
+    },
+    {
+      "sosmed": "telegram",
+      "link": "http://t.me/Ripkixou",
+      "icon": "bxl-telegram"
+    }
+  ]
+}

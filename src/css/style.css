@@ -1,0 +1,420 @@
+:root {
+  --light: #dbe3fa;
+  --dark: #2b323c;
+  --merah: #ff5c5b;
+  --kuning: #ffde59;
+  --hijau: #48c96c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  background-color: var(--dark);
+  border-radius: 10px;
+  width: 80%;
+  transition: 0.5s;
+}
+
+.container.active {
+  background-color: var(--light);
+  border: 3px solid var(--dark);
+  box-shadow: 10px 10px 0 var(--dark);
+}
+
+.container.active > .areaProfile:hover + .hoverProfile {
+  box-shadow: 2px 2px 0 var(--dark);
+}
+
+.container.active > h1 {
+  color: var(--dark);
+}
+
+.container.active > h1 span {
+  color: var(--merah);
+}
+
+.container.active > .listLink .btn-List {
+  border-color: var(--dark);
+}
+
+.container.active > .listLink .btn-List a {
+  color: var(--dark);
+}
+.container.active > .listLink .btn-List:hover {
+  box-shadow: 2px 2px 0 var(--dark);
+}
+
+.container.active > .music i {
+  color: var(--dark);
+  font-size: 2rem;
+}
+
+.container.active > .material a:hover span {
+  box-shadow: 2px 2px 0 var(--dark);
+}
+
+.container.active > .music span {
+  box-shadow: 2px 2px 0 var(--dark);
+}
+
+.container .traffic-lights {
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.container .traffic-lights span {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.container .traffic-lights span.merah {
+  background-color: var(--merah);
+}
+.container .traffic-lights span.kuning {
+  background-color: var(--kuning);
+}
+.container .traffic-lights span.hijau {
+  background-color: var(--hijau);
+}
+.container .traffic-lights.active span.merah {
+  animation: gelombang 1.5s 0.5s infinite forwards alternate;
+}
+.container .traffic-lights.active span.kuning {
+  animation: gelombang 1.5s 1s infinite forwards alternate;
+}
+.container .traffic-lights.active span.hijau {
+  animation: gelombang 1.5s 1.5s infinite forwards alternate;
+}
+
+@keyframes gelombang {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -2px;
+    scale: 1;
+  }
+  100% {
+    top: 2px;
+    scale: 0.9;
+  }
+}
+
+.container .areaProfile {
+  position: relative;
+  margin: 0 auto;
+  top: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid var(--dark);
+}
+
+.container .hoverProfile {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  top: -50px;
+  left: 20px;
+  border: 2px solid var(--dark);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.9s;
+  background-color: var(--light);
+  opacity: 0;
+}
+.container .hoverProfileRight {
+  position: absolute;
+  top: -50px;
+  right: 37%;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: 0.9s;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+.container .areaProfile:hover + .hoverProfile {
+  opacity: 1;
+  top: -90px;
+}
+.container .areaProfile:hover + .hoverProfile + .hoverProfileRight {
+  opacity: 1;
+  animation: emosi 1s alternate;
+}
+
+@keyframes emosi {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.container .areaProfile img {
+  user-select: none;
+  width: 100%;
+  transition: 0.7s;
+}
+.container .areaProfile img:hover {
+  scale: 1.1;
+}
+
+.container .music {
+  user-select: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.container .music span {
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  padding: 3px 15px;
+  border-radius: 5px;
+  border: 2px solid var(--dark);
+  transition: 0.7s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.container .music:hover span {
+  opacity: 1;
+  top: -50px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.container .music i {
+  font-size: 1.5rem;
+  color: var(--light);
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.container h1 {
+  position: relative;
+  top: -30px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--light);
+  transition: 1s;
+}
+
+.container h1 span {
+  color: var(--kuning);
+  transition: 1s;
+}
+
+.container .listLink {
+  position: relative;
+  top: -20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .listLink .btn-List {
+  border: 2px solid var(--light);
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container .listLink .btn-List a {
+  padding: 0.5rem;
+  display: block;
+  width: 100%;
+  color: var(--light);
+  font-weight: bold;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.container .listLink .btn-List a:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.container .material {
+  position: absolute;
+  margin-top: 20px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: 1s;
+  gap: 20px;
+}
+
+.container .material a {
+  position: relative;
+  color: var(--dark);
+  font-size: 2rem;
+  transition: 0.5s;
+}
+
+.container .material a:hover {
+  top: -2px;
+}
+
+.container .material a span {
+  position: absolute;
+  display: block;
+  padding: 5px 10px;
+  bottom: -55px;
+  left: -25px;
+  width: 100px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  transition: 0.8s;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+}
+
+.container .material a:hover span {
+  border-radius: 5px;
+  bottom: -35px;
+  opacity: 1;
+  border: 2px solid var(--dark);
+}
+
+@media (max-width: 200px) {
+  body {
+    color: var(--dark);
+  }
+  body .container > * {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+  }
+  body .container .music {
+    opacity: 1;
+    pointer-events: all;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 999999;
+  }
+  body .container .music i {
+    right: 50%;
+  }
+  body .container::after {
+    content: "minimal di lebar 201 😌";
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--dark);
+    text-align: center;
+  }
+}
+
+@media (max-width: 280px) {
+  .container .areaProfile {
+    top: -40px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .container .material {
+    margin-top: 0px;
+    height: 40px;
+  }
+
+  .container .material a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .container .areaProfile {
+    top: -50px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .container .hoverProfile {
+    top: 0;
+    z-index: -1;
+  }
+  .container .areaProfile:hover + .hoverProfile {
+    left: 10%;
+    top: -70px;
+  }
+  .container .hoverProfileRight {
+    right: 35%;  
+    top: -70px;
+  font-size: 3rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    width: 600px;
+  }
+
+  .container .traffic-lights span {
+    width: 15px;
+    height: 15px;
+  }
+
+  .container .areaProfile {
+    top: -50px;
+    width: 200px;
+    height: 200px;
+  }
+  .container .hoverProfileRight {
+    right: 40%;
+  }
+  .container h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 700px;
+  }
+
+  .container .areaProfile {
+    top: -70px;
+    width: 200px;
+    height: 200px;
+  }
+}
