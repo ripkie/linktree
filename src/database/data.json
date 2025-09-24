@@ -7,12 +7,12 @@
   "musik": "src/musik/music.mpeg",
   "btnList": [
     {
-      "sosmed": "whatsapp",
-      "link": "https://wa.me/6282153439760"
+      "sosmed": "Portofolio",
+      "link": "https://drive.google.com/file/d/17pK5XUItkCGqU4AfBFWfKd53tGfwWKEL/view?usp=sharing"
     },
     {
-      "sosmed": "my website",
-      "link": "https://rifkitkj2.wordpress.com/"
+      "sosmed": "Github",
+      "link": "https://github.com/ripkie"
     }
   ],
   "btnIcon": [
@@ -22,14 +22,15 @@
       "icon": "bxl-instagram"
     },
     {
-      "sosmed": "tiktok",
-      "link": "https://www.tiktok.com/@bvgjkdjdj?_t=8fWN4IRjiBW&_r=1",
-      "icon": "bxl-tiktok"
-    },
-    {
       "sosmed": "telegram",
-      "link": "http://t.me/Ripkixou",
+      "link": "https://web.telegram.org/a/#7134625152",
       "icon": "bxl-telegram"
+    }
+    {
+      "sosmed": "email",
+      "link": "http://t.me/Ripkixou",
+      "icon": "bxl-email"
     }
   ]
 }
+
