@@ -25,12 +25,11 @@
       "sosmed": "telegram",
       "link": "https://web.telegram.org/a/#7134625152",
       "icon": "bxl-telegram"
-    }
+    },
     {
       "sosmed": "email",
-      "link": "http://t.me/Ripkixou",
-      "icon": "bxl-email"
+      "link": "mailto:muhammadrifkiwidya@gmail.com",
+      "icon": "bx-envelope"
     }
   ]
 }
-
